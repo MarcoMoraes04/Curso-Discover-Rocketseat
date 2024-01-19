@@ -6,7 +6,8 @@ body{
     background-position:top center;
     background-position: cover;
     background: url(./assets/bg-mobile.jpg) no-repeat repeat top center/cover;
-    background: var( --bg-url)
+    background: var( --bg-url);
+    height:100vh;
 }
 
 body * {
@@ -21,7 +22,7 @@ body * {
         
     }
     :root{
-        --text-color:white;
+        --text-color:black;
         --bg-url:url(./assets/bg-mobile.jpg);
         --stroke-color: rgba(255, 255, 255, 0.5);
         --surface-color:rgba(255, 255, 255, 0.1);
@@ -178,4 +179,12 @@ ul li a:hover{
     padding:24px 0;
     text-align:center;
   }  
-    
+
+ @media (min-width:700px) {
+    :root{
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+    .light{
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+ }
